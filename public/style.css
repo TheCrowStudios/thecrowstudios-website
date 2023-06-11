@@ -1,0 +1,60 @@
+body {
+    background-color: #222222;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+a:hover {
+    color: beige;
+    text-decoration: underline;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+#websites {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 600px;
+    text-align: center;
+}
+
+a > div > img {
+    width: 64px;
+}
+
+#donate {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#crypto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 480px;
+    overflow-wrap: break-word;
+    font-size: small;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+}
