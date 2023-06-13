@@ -5,8 +5,8 @@ const https = require("https")
 const fs = require("fs")
 const fileDump = require("../File Dump/server")
 const gunCrow = require("../Gun Crow/server")
-const privateKey = fs.readFileSync("C:\\Certbot\\live\\www.thecrowstudios.com\\privkey.pem", "utf-8")
-const certificate = fs.readFileSync("C:\\Certbot\\live\\www.thecrowstudios.com\\fullchain.pem", "utf-8")
+const privateKey = fs.readFileSync(process.env.HTTPSPRIVATEKEYPATH, "utf-8")
+const certificate = fs.readFileSync(process.env.HTTPSCERTIFICATEPATH, "utf-8")
 
 const app = express()
 
