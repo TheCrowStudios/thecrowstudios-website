@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: #222222;
+}
+
 body {
     background-color: #222222;
     color: #ffffff;
@@ -28,6 +38,10 @@ a:hover {
     text-align: center;
 }
 
+#websites > div {
+    width: 200px;
+}
+
 a > div > img {
     width: 64px;
 }
@@ -46,7 +60,8 @@ a > div > img {
     flex-direction: column;
     margin: auto;
     margin-top: 20px;
-    max-width: 480px;
+    width: 480px;
+    max-width: 100%;
     overflow-wrap: break-word;
     font-size: small;
 }
