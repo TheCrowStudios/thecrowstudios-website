@@ -25,14 +25,16 @@ app.use((req, res, next) => {
     next()
 })
 app.use((req, res, next) => {
-    let log = `${(new Date()).toLocaleString()} ${req.ip} ${req.hostname}${req.url}`
+    let log = `${(new Date()).toLocaleString()} ${req.ip} ${req.headers["user-agent"]} ${req.hostname}${req.url}`
     fs.appendFile("log_verbose.txt", `${log}\n`, (err) => {
         if (err) console.log(err)
     })
     next()
 })
 app.use(vhost("filedump.thecrowstudios.com", fileDump))
+app.use(vhost("filedump.localhost", fileDump))
 app.use(vhost("guncrow.thecrowstudios.com", gunCrow))
+app.use(vhost("guncrow.localhost", gunCrow))
 app.use(express.static("public/"))
 
 app.get("/", (req, res) => {
